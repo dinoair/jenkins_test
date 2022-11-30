@@ -9,8 +9,8 @@
     - name: copy jar
       copy:
         src: './../java/target/{{ jar }}'
-        dest: '/dir_with_res/{{ jar }}'
+        dest: '/Users/dinoair/.jenkins/dir_with_res/{{ jar }}'
         mode: '0755'
     - name: run jar
-      shell: java -jar /dir_with_res/{{ jar }} > /dir_with_res/result.txt
+      shell: java -jar /Users/dinoair/.jenkins/dir_with_res/{{ jar }} > /Users/dinoair/.jenkins/dir_with_res/result.txt
     
