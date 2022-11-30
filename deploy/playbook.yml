@@ -1,11 +1,11 @@
 ---
 - hosts: 127.0.0.1
-  become: yes
+#   become: yes
   vars:
     jar: 'java-1.0-SNAPSHOT.jar'
   tasks:
     - name: dir exists
-      file: path=/Users/dinoair/.jenkins/dir_with_res/ state=directory
+      file: /dir_with_res/ state=directory
     - name: copy jar
       copy:
         src: './../java/target/{{ jar }}'
